@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Recipe page</title>
+  <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+  body {
+    background-color: #f4eae2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    padding: 30px;
+  }
+
+  .recipe-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+    .attribution { font-size: 11px; text-align: center; margin-top: 30px}
+    .attribution a { color: hsl(228, 45%, 44%); margin-top: 30px}
+
+    @font-face {
+    font-family: 'YoungSerif'; 
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype'); 
+}
+
+    @font-face {
+      font-family: 'Outfit';
+      src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+        }
+
+    h1 {
+      font-size: 28px;
+      font-family: 'YoungSerif', serif;
+      margin-bottom: 20px;
+    }
+      
+    p { 
+      font-family: 'Outfit', sans-serif;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-family:'YoungSerif', serif;
+      font-size: 24px;
+      color: saddlebrown;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgb(98, 98, 98);
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      color: purple;
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      font-family: 'Outfit', sans-serif;
+      margin: 10px 0;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    ul li::marker {
+    color: saddlebrown;
+    }
+
+    ol li::marker {
+    color: saddlebrown;
+    font-weight: bold; 
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .prep-time {
+      font-family:'Outfit', sans-serif;
+      padding: 30px;
+      margin: 30px;
+      border-radius: 15px;
+      background-color: rgb(255, 243, 250)
+     }
+
+    .prep-time-list li::marker {
+      color: purple;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table td {
+      font-family: 'Outfit', sans-serif;
+      color: saddlebrown;
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    table td:first-child {
+      color: #656565;
+      font-family: 'Outfit', sans-serif;
+    } 
+    
+    h1, h2, h3, p {
+      font-size: 1rem; 
+    }   
+
+    @media (min-width: 600px) {
+    .recipe-card {
+        max-width: 800px; 
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .prep-time-list li::marker, .instructions-list li::marker {
+        font-size: 0.9rem; 
+    }
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="recipe-card">
+  <img src="./assets/images/image-omelette.jpeg" alt="Picture of the omelette" class="recipe-image">
+  <h1>Simple Omelette Recipe</h1>
+
+  <p class="description">An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+  to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+
+
+ <div class="prep-time">
+  <h3><b>Preparation time</b></h3>
+  <ul class="prep-time-list">
+  <li><strong>Total:</strong> Approximately 10 minutes</li>
+  <li><strong>Preparation:</strong> 5 minutes</li>
+  <li><strong>Cooking:</strong> 5 minutes</li>
+  </ul>
+  </div>
+  <h2>Ingredients</h3>
+  <ul>
+    <li>2-3 large eggs</li>
+    <li>Salt, to taste</li>
+    <li>Pepper, to taste</li>
+    <li>1 tablespoon of butter or oil</li>
+    <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+  </ul>
+<h2>Instructions</h4>
+<ol>
+  <li><b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+    You can add a tablespoon of water or milk for a fluffier texture.</li>
+  <li><b>Heat the pan:</b> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+  <li><b>Cook the omelette:</b> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+    the eggs evenly coat the surface.</li>
+  <li><b>Add fillings (optional):</b> When the eggs begin to set at the edges but are still slightly runny in the 
+    middle, sprinkle your chosen fillings over one half of the omelette.</li>
+  <li><b>Fold and serve:</b> As the omelette continues to cook, carefully lift one edge and fold it over the 
+    fillings. Let it cook for another minute, then slide it onto a plate.</li>
+  <li><b>Enjoy:</b> Serve hot, with additional salt and pepper if needed.</li>
+</ol>
+
+<div class="nutrition-section">
+ <h2>Nutrition</h2> 
+ <p>The table below shows nutritional values per serving without the additional fillings.</p>
+  <table>
+  <tr><td>Calories</td><td><b>277kcal</b></td></tr>
+  <tr><td>Carbs</td><td><b>0g</b></td></tr>
+  <tr><td>Protein</td><td><b>20g</b></td></tr>
+  <tr><td>Fat</td><td><b>22g</b></td></tr>
+</table>
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sabina Zuskarová</a>.
+  </div>
+</body>
+</html>
